@@ -4,12 +4,18 @@ on:
     - cron: '0 11 * * 5'
 
 jobs:
-  build:
+  Presentation:
     runs-on: ubuntu-latest
     steps:
-    - run: echo "This is my pipeline ${{ github.actor }} 🎉"
-    - run: echo "This is my branch ${{ github.ref }} 🔎"
-    - run: echo "This is the list of my files"
-    - name: List files in the repository
-      run: |
-        ls ${{ github.workspace }}
+      - run: echo "This is my pipeline ${{ github.actor }} 🎉"
+  Branch:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "This is my branch ${{ github.ref }} 🔎"
+  Files:
+      runs-on: ubuntu-latest
+      steps:
+      - run: echo "These are my files"
+      - name: List files in the repository
+        run: |
+          ls ${{ github.workspace }}
