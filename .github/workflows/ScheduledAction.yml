@@ -18,5 +18,4 @@ jobs:
       steps:
       - run: echo "These are my files"
       - name: List files in the repository
-        run:
-          ls ${{ github.workspace }}
+        run: echo "These are my files ${{ github.workspace }}"
