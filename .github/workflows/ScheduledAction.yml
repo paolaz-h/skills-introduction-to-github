@@ -1,5 +1,6 @@
 name: Scheduled Action
 on:
+  push:
   schedule:     
     - cron: '0 11 * * 5'
 
