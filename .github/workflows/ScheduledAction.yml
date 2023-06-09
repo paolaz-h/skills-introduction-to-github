@@ -17,5 +17,6 @@ jobs:
       runs-on: ubuntu-latest
       steps:
       - run: echo "These are my files"
-      - name: List files in the repository
-        run: echo "These are my files ${{ github.workspace }}"
+      name: List files in the repository
+        run: |
+            ls ${{ github.workspace }}
